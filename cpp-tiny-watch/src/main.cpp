@@ -14,13 +14,21 @@ void setup() {
   {
     pinMode(pinsLed[i],OUTPUT);
   }
-  displayTime(1,15);
+
+  digitalWrite(HOUR_GND_PIN,HIGH);
+  digitalWrite(MIN_GND_PIN,HIGH);
 
   
 }
 
 void loop() {
-  
+  pin_size_t pinsLed [] = {LED_PINS};
+  for (size_t i = 0; i < 12; i++)
+  {
+    digitalWrite(pinsLed[i],HIGH);
+    delay(500);
+    digitalWrite(pinsLed[i],LOW);
+  }
 }
 
 
