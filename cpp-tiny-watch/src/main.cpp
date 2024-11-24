@@ -14,21 +14,26 @@ void setup() {
   {
     pinMode(pinsLed[i],OUTPUT);
   }
+pinMode(MIN_GND_PIN,OUTPUT);
+pinMode(HOUR_GND_PIN,OUTPUT);
 
-  digitalWrite(HOUR_GND_PIN,HIGH);
-  digitalWrite(MIN_GND_PIN,HIGH);
-
+//digitalWrite(HOUR_GND_PIN,LOW);
+//digitalWrite(MIN_GND_PIN,HIGH);
+  displayTime(1,15);
   
 }
 
 void loop() {
+  /*
   pin_size_t pinsLed [] = {LED_PINS};
+  digitalWrite(pinsLed[1],HIGH);
   for (size_t i = 0; i < 12; i++)
   {
     digitalWrite(pinsLed[i],HIGH);
     delay(500);
     digitalWrite(pinsLed[i],LOW);
   }
+  */
 }
 
 
@@ -63,7 +68,7 @@ int displayTime(int hour, int minute)
 
   iLedMin = (int) round((double) minute / 5) - 1;
   // Enable LED
-  for (size_t i = 0; i < (int) Diplay_duration / Blink_duration; i++)
+  for (size_t i = 0; i < (int) (Diplay_duration / Blink_duration); i++)
   {
     digitalWrite(HOUR_GND_PIN,HIGH);
     digitalWrite(MIN_GND_PIN,LOW);
