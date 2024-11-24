@@ -16,7 +16,7 @@ uint8_t str2dec(const char *p) {
   return( (*p == ' ') ? (*(++p) - '0') : ((*p++ - '0') * 10 + (*p - '0')) );
 }
 
-void TIME_init(void)
+void initTime(void)
 {
     char *ptr = __TIME__;                         // format "23:59:01"
     t.hour   = str2dec(ptr); ptr += 3;            // hour
@@ -47,7 +47,7 @@ void incrementTime()
 }
 
 void setup() {
-  TIME_init();
+  initTime();
   initdisplay();
   displayTime((int) t.hour,(int) t.minute);
 }
