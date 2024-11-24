@@ -2,8 +2,8 @@
 #define LED_PINS PIN_PA2,PIN_PA1,PIN_PC3,PIN_PC2,PIN_PC1,PIN_PC0,PIN_PB1,PIN_PB4,PIN_PB5,PIN_PA7,PIN_PA6,PIN_PA5
 #define HOUR_GND_PIN PIN_PA4
 #define MIN_GND_PIN PIN_PA3
-#define Blink_duration 1000
-#define Diplay_duration 40000
+#define Blink_duration 10
+#define Diplay_duration 4000
 
 // put function declarations here:
 int displayTime(int, int);
