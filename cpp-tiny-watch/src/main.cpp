@@ -24,6 +24,28 @@ void TIME_init(void)
     t.second = str2dec(ptr);                      // second
 };
 
+void incrementTime()
+{
+  t.second++;
+  if(t.second >= 60)
+  {
+    // minute wrap
+    t.second = 0;
+    t.minute++;
+  }
+  if(t.minute >= 60)
+  {
+    // hour wrap
+    t.minute = 0;
+    t.hour ++;
+  }
+  if(t.hour >= 24)
+  {
+    t.hour = 0;
+    t.minute = 0;
+  }
+}
+
 void setup() {
   TIME_init();
   initdisplay();
