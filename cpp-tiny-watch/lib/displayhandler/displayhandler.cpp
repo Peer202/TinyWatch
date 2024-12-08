@@ -121,12 +121,3 @@ int displayTime(int hour, int minute)
   
   return 1;
 }
-
-int debugBlink ()
-{
-  digitalWrite(PIN_PA1,HIGH);
-  digitalWrite(HOUR_GND_PIN,HIGH);
-  delay(250);
-  digitalWrite(PIN_PA1,LOW);
-  digitalWrite(HOUR_GND_PIN,LOW);
-}
