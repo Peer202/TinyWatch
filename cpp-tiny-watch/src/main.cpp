@@ -1,4 +1,4 @@
-#include <Arduino.h>
+//#include <Arduino.h>
 
 #include <avr/io.h>           // for GPIO
 #include <avr/sleep.h>        // for sleep functions
@@ -14,23 +14,14 @@ typedef struct time
   uint8_t hour;
 };
 
+
 time t;
 
 void incrementTime(void);
 void initPIT(void);
 void initTime(void);
 
-void LED0_init(void)
-{
-  /* Make High (OFF) */
-  PORTB.OUT |= PIN5_bm;
-  /* Make output */
-  PORTB.DIR |= PIN5_bm;
-  }
-  inline void LED0_toggle(void)
-  {
-  PORTB.OUTTGL |= PIN5_bm;
-}
+
 
 
 void initPIT(){
@@ -49,10 +40,11 @@ void initPIT(){
 
 ISR(RTC_PIT_vect){
   RTC.PITINTFLAGS = RTC_PI_bm;                  // clear interrupt flag
-  LED0_toggle();
+  TogglePin(1,2);
   //incrementTime();
   //displayTime((int) t.hour,(int) t.minute);
 }
+
 
 
 uint8_t str2dec(const char *p) {
@@ -90,6 +82,7 @@ void incrementTime(void)
   }
 }
 
+
 int main(void)
 {
   //SETUP
@@ -101,9 +94,10 @@ int main(void)
   // enable Global Interrupt Mask
   sei(); 
   //debugBlink();
-
-  displayTime((int) t.hour,(int) t.minute);
-  
+  TogglePinDir(1,2);
+  TogglePin(1,2);
+  TogglePin(1,4);
+  //displayTime((int) t.hour,(int) t.minute);
   
   // Loop
   while(1) {                                    // loop until forever                         
