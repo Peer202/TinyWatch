@@ -1,8 +1,7 @@
 
 int initdisplay();
-int displayTime(int, int);
-int debugBlink();
+void displayTime(int, int);
 
-void TogglePin(int,int);
-void TogglePinDir(int,int);
+void TogglePinOutLevel(int,int);
+void SetPinDirOut(int,int);
 void debug_blink(void);
