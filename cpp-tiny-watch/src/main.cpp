@@ -50,9 +50,7 @@ void initPIT(){
 
 ISR(RTC_PIT_vect){
   RTC.PITINTFLAGS = RTC_PI_bm;                  // clear interrupt flag
-  TogglePin(1,2);
-  //incrementTime();
-  //displayTime((int) t.hour,(int) t.minute);
+  incrementTime();
 }
 
 
@@ -71,14 +69,14 @@ void initTime(void)
 
 void incrementTime(void)
 {
-  t.second++;
+  //t.second++;
+  t.second = t.second + 1;
   if(t.second >= 60)
   {
     // minute wrap
     t.second = 0;
     t.minute++;
   }
-  //t.minute = t.minute + 5;
   if(t.minute >= 60)
   {
     // hour wrap
@@ -99,33 +97,16 @@ int main(void)
   //_PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, 3);
   initTime();
   initdisplay();
-  //LED0_init();
   initButton();
   initPIT();
   // enable Global Interrupt Mask
   sei(); 
-  //debugBlink();
-  TogglePinDir(1,2);
-  TogglePin(1,2);
-  TogglePin(1,4);
-  //displayTime((int) t.hour,(int) t.minute);
   
+
   // Loop
-  while(1) {                                    // loop until forever                         
+  while(1) {       
+                      
     //sleep_cpu();                                // sleep until next second
     //debugBlink();
   }
 }
-
-/*
-void setup() {
-  
-}
-
-//RTC_PIT_vect
-void loop() {
-  //debugBlink();
-}
-*/
-
-
