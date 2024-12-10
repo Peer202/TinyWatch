@@ -3,7 +3,7 @@
 #include <avr/io.h>           // for GPIO
 #include <avr/sleep.h>        // for sleep functions
 #include <avr/interrupt.h>    // for interrupts
-
+#include <util/delay.h>       // for delay usage
 #include <displayhandler.h>
 #include <clockhandler.h>
 
@@ -22,6 +22,16 @@ void initPIT(void);
 void initTime(void);
 
 
+void initButton()
+{
+  PORTB.DIRCLR = PIN0_bm;
+  PORTB.PIN0CTRL = PORT_ISC_RISING_gc;
+};
+
+ISR(PORTB_PORT_vect){
+  PORTB.INTFLAGS = PIN0_bm;                  // clear interrupt flag
+  displayTime((int) t.hour,(int) t.minute);
+}
 
 
 void initPIT(){
@@ -90,6 +100,7 @@ int main(void)
   initTime();
   initdisplay();
   //LED0_init();
+  initButton();
   initPIT();
   // enable Global Interrupt Mask
   sei(); 
