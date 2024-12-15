@@ -65,6 +65,9 @@ void initTime(void)
     t.hour   = str2dec(ptr); ptr += 3;            // hour
     t.minute = str2dec(ptr); ptr += 3;            // minute
     t.second = str2dec(ptr);                      // second
+   //t.hour = 0;
+   //t.minute = 0;
+   //t.second = 0;
 };
 
 void incrementTime(void)
