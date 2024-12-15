@@ -468,7 +468,7 @@
       "plot": "Export/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "TinyWatch.step",
       "svg": "",
       "vrml": ""
     },
