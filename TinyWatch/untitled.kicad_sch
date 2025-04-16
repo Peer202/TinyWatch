@@ -295,49 +295,52 @@
 				)
 			)
 		)
-		(symbol "Simulation_SPICE:NPN"
-			(pin_numbers hide)
+		(symbol "Transistor_BJT:MMBT5551L"
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Q"
-				(at -2.54 7.62 0)
+				(at 5.08 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "NPN"
-				(at -2.54 5.08 0)
+			(property "Value" "MMBT5551L"
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 63.5 0 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-				(at 63.5 0 0)
+			(property "Datasheet" "www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
+			(property "Description" "0.6A Ic, 160V Vce, NPN Transistor, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -346,7 +349,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Device" "NPN"
+			(property "ki_keywords" "NPN Transistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -355,7 +358,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Type" "GUMMELPOON"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -364,67 +367,13 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=C 2=B 3=E"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "simulation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NPN_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 0.635 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "MMBT5551L_0_1"
 				(polyline
 					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
 						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 -1.27) (xy 2.794 -1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 -1.27) (xy 2.794 -1.27)
-					)
-					(stroke
-						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -479,11 +428,11 @@
 					)
 				)
 			)
-			(symbol "NPN_1_1"
-				(pin open_collector line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
+			(symbol "MMBT5551L_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.715)
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -498,10 +447,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "B"
+					(name "E"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -516,10 +465,10 @@
 						)
 					)
 				)
-				(pin open_emitter line
-					(at 2.54 -5.08 90)
+				(pin passive line
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "E"
+					(name "C"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -713,6 +662,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 135.89) (xy 82.55 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0042f89e-b96b-45d6-bb7e-4f90f1e24a1f")
+	)
+	(wire
+		(pts
 			(xy 62.23 105.41) (xy 74.93 105.41)
 		)
 		(stroke
@@ -753,16 +712,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 105.41) (xy 62.23 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0776e64f-88d8-48df-81c5-e4d1746fa597")
-	)
-	(wire
-		(pts
 			(xy 62.23 113.03) (xy 62.23 116.84)
 		)
 		(stroke
@@ -773,23 +722,23 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 66.04) (xy 115.57 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f4eb687-9ec2-4970-8128-df80c8d7adc5")
-	)
-	(wire
-		(pts
-			(xy 100.33 86.36) (xy 104.14 86.36)
+			(xy 100.33 86.36) (xy 115.57 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "272036f0-8dde-4b38-b48f-f53a85a8257c")
+	)
+	(wire
+		(pts
+			(xy 52.07 161.29) (xy 52.07 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c524cc4-b7b7-4f43-aa77-ad1f8b1d99be")
 	)
 	(wire
 		(pts
@@ -823,17 +772,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 40.64) (xy 162.56 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33a37f67-749b-4543-9d15-284465956e82")
-	)
-	(wire
-		(pts
-			(xy 54.61 163.83) (xy 63.5 163.83)
+			(xy 52.07 163.83) (xy 63.5 163.83)
 		)
 		(stroke
 			(width 0)
@@ -843,33 +782,13 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 40.64) (xy 115.57 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b581808-af01-4a5a-bf0a-116851686538")
-	)
-	(wire
-		(pts
-			(xy 100.33 105.41) (xy 104.14 105.41)
+			(xy 100.33 105.41) (xy 115.57 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3cabd52f-a34a-4775-a996-45ce1459e3ae")
-	)
-	(wire
-		(pts
-			(xy 111.76 86.36) (xy 115.57 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3e4d96b1-95ef-41aa-bc18-d08dc3403fa8")
 	)
 	(wire
 		(pts
@@ -893,36 +812,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 105.41) (xy 162.56 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a5dd366-33c7-4a62-918d-db48c3d11c6a")
-	)
-	(wire
-		(pts
-			(xy 58.42 86.36) (xy 62.23 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cb0efce-91cd-4448-b264-61f3d4b5e947")
-	)
-	(wire
-		(pts
-			(xy 158.75 83.82) (xy 162.56 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50570257-972c-47ce-a16c-a859e7f4a035")
-	)
-	(wire
-		(pts
 			(xy 162.56 69.85) (xy 162.56 73.66)
 		)
 		(stroke
@@ -933,17 +822,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 40.64) (xy 62.23 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5281c99c-8357-433a-aca1-748af5f291e3")
-	)
-	(wire
-		(pts
-			(xy 46.99 66.04) (xy 50.8 66.04)
+			(xy 46.99 66.04) (xy 62.23 66.04)
 		)
 		(stroke
 			(width 0)
@@ -963,7 +842,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 83.82) (xy 151.13 83.82)
+			(xy 149.86 83.82) (xy 162.56 83.82)
 		)
 		(stroke
 			(width 0)
@@ -973,23 +852,13 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 149.86) (xy 82.55 152.4)
+			(xy 72.39 149.86) (xy 72.39 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5f336c1e-e96d-4e1b-affe-c1211a54332f")
-	)
-	(wire
-		(pts
-			(xy 58.42 66.04) (xy 62.23 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6700f4a1-0c8c-46cb-9a52-bccc51e83249")
+		(uuid "5e4754ed-9c3f-4139-bcff-4104e22c3200")
 	)
 	(wire
 		(pts
@@ -1053,7 +922,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 105.41) (xy 50.8 105.41)
+			(xy 46.99 105.41) (xy 62.23 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1103,7 +972,17 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 66.04) (xy 104.14 66.04)
+			(xy 52.07 135.89) (xy 52.07 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85c5cecf-4720-4fcc-9373-7c76f6e74eec")
+	)
+	(wire
+		(pts
+			(xy 100.33 66.04) (xy 115.57 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1123,16 +1002,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 162.56) (xy 54.61 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d6e51b2-0ad4-43e0-86aa-3e1c9a78e609")
-	)
-	(wire
-		(pts
 			(xy 62.23 66.04) (xy 74.93 66.04)
 		)
 		(stroke
@@ -1143,7 +1012,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 86.36) (xy 50.8 86.36)
+			(xy 46.99 86.36) (xy 62.23 86.36)
 		)
 		(stroke
 			(width 0)
@@ -1153,7 +1022,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 105.41) (xy 151.13 105.41)
+			(xy 147.32 105.41) (xy 162.56 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1203,16 +1072,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 148.59) (xy 54.61 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdd449e0-e15e-4054-8510-7a3b9a502caf")
-	)
-	(wire
-		(pts
 			(xy 74.93 48.26) (xy 74.93 52.07)
 		)
 		(stroke
@@ -1233,23 +1092,23 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 62.23) (xy 151.13 62.23)
+			(xy 72.39 157.48) (xy 74.93 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cce4a3d0-0985-4fe0-bd89-20498cce125b")
+	)
+	(wire
+		(pts
+			(xy 149.86 62.23) (xy 162.56 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ceb7a673-c850-4ac2-929c-6cccde507ea0")
-	)
-	(wire
-		(pts
-			(xy 111.76 105.41) (xy 115.57 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3007291-3613-45d5-9478-0933100781a8")
 	)
 	(wire
 		(pts
@@ -1263,7 +1122,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 40.64) (xy 151.13 40.64)
+			(xy 147.32 40.64) (xy 162.56 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1273,7 +1132,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 40.64) (xy 50.8 40.64)
+			(xy 48.26 40.64) (xy 62.23 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1313,7 +1172,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 40.64) (xy 104.14 40.64)
+			(xy 100.33 40.64) (xy 115.57 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1330,16 +1189,6 @@
 			(type default)
 		)
 		(uuid "ecc03177-147a-4b8c-a541-45148f273ef4")
-	)
-	(wire
-		(pts
-			(xy 158.75 62.23) (xy 162.56 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eccf3272-0320-45c5-9d26-45865e9919b9")
 	)
 	(wire
 		(pts
@@ -1769,7 +1618,7 @@
 	)
 	(global_label "GS1"
 		(shape input)
-		(at 54.61 148.59 90)
+		(at 52.07 135.89 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1779,7 +1628,7 @@
 		)
 		(uuid "a1c2ae72-8dcd-4905-8d55-93ed858cfbb5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 54.61 141.9158 90)
+			(at 52.07 129.2158 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1813,22 +1662,22 @@
 	)
 	(global_label "GND_T_2"
 		(shape input)
-		(at 46.99 157.48 180)
+		(at 59.69 156.21 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "b07b706b-ce79-4fb4-8e51-10a2945d7b20")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 36.022 157.48 0)
+			(at 70.658 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -1989,22 +1838,22 @@
 	)
 	(global_label "GND_T_1"
 		(shape input)
-		(at 74.93 157.48 180)
+		(at 72.39 149.86 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "d1695cc0-d3ed-4d46-9376-4b55399cfdb4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 63.962 157.48 0)
+			(at 72.39 138.892 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -2099,7 +1948,7 @@
 	)
 	(global_label "GS2"
 		(shape input)
-		(at 82.55 149.86 90)
+		(at 82.55 135.89 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2109,7 +1958,7 @@
 		)
 		(uuid "ed07cc4b-34b4-48dc-bf9a-e97fba9567a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 82.55 143.1858 90)
+			(at 82.55 129.2158 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2252,74 +2101,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 54.61 105.41 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0803f9c0-dade-4466-91c7-3ae17d2ce09f")
-		(property "Reference" "R6"
-			(at 54.61 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 54.61 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 54.61 107.188 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.61 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 54.61 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1cd963bb-ee0c-4cf2-9625-5036fa3c361b")
-		)
-		(pin "2"
-			(uuid "75795779-fc42-4f22-b4f1-f1c4e3e191db")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 62.23 109.22 90)
 		(unit 1)
@@ -2347,7 +2128,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 62.23 109.22 0)
 			(effects
 				(font
@@ -2417,7 +2198,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 128.27 109.22 0)
 			(effects
 				(font
@@ -2487,7 +2268,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 62.23 44.45 0)
 			(effects
 				(font
@@ -2557,7 +2338,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 115.57 69.85 0)
 			(effects
 				(font
@@ -2601,32 +2382,34 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 54.61 66.04 90)
+		(at 52.07 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "25b8a791-6481-400a-96f5-e6aeaf6eff2d")
-		(property "Reference" "R4"
-			(at 54.61 59.69 90)
+		(uuid "30acdfd6-b749-454d-99da-7974029bf66e")
+		(property "Reference" "R3"
+			(at 54.61 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "50"
-			(at 54.61 62.23 90)
+			(at 54.61 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 54.61 67.818 90)
+			(at 50.292 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2635,7 +2418,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 54.61 66.04 0)
+			(at 52.07 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2644,7 +2427,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 54.61 66.04 0)
+			(at 52.07 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2653,15 +2436,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "85496b08-ddf9-4942-9e27-dfc8cd403c4e")
+			(uuid "9b5694f6-f347-4053-a1fd-d6af8b4dabcb")
 		)
 		(pin "2"
-			(uuid "ca3267d3-62d5-4a73-9819-658f6346934b")
+			(uuid "6017e8b3-a710-4f03-8ef5-6063aeb91182")
 		)
 		(instances
 			(project "TinyWatch"
 				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R4")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -2695,7 +2478,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 128.27 69.85 0)
 			(effects
 				(font
@@ -2738,74 +2521,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 154.94 62.23 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "338fb3a5-147e-47da-8d3e-bd45615b6aa7")
-		(property "Reference" "R12"
-			(at 154.94 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 154.94 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 154.94 64.008 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 154.94 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "608e8ccd-f7fe-47d9-b163-88d3622ac06c")
-		)
-		(pin "2"
-			(uuid "3c583421-6bcd-497a-b634-0b9d6ffa5577")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 175.26 109.22 90)
 		(unit 1)
@@ -2833,7 +2548,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 175.26 109.22 0)
 			(effects
 				(font
@@ -2876,74 +2591,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 154.94 40.64 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3bfa70b7-f0aa-47e6-833b-87b043f0e0f2")
-		(property "Reference" "R11"
-			(at 154.94 34.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 154.94 36.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 154.94 42.418 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 154.94 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c2c7ecbd-996c-46d6-9fd6-06114b207792")
-		)
-		(pin "2"
-			(uuid "1ccc103f-588e-4289-8e50-1e958bdda350")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 175.26 44.45 90)
 		(unit 1)
@@ -2970,7 +2617,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 175.26 44.45 0)
 			(effects
 				(font
@@ -3013,74 +2660,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 54.61 40.64 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5033445a-e430-4a91-b6bb-0b26b7b1c47f")
-		(property "Reference" "R3"
-			(at 54.61 34.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 54.61 36.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 54.61 42.418 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.61 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 54.61 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d8780970-cb25-4a23-9be7-ce500063c122")
-		)
-		(pin "2"
-			(uuid "45cd4fa1-1db7-4047-b877-ff193e2ee3ea")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 115.57 90.17 90)
 		(unit 1)
@@ -3108,7 +2687,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 115.57 90.17 0)
 			(effects
 				(font
@@ -3178,7 +2757,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 175.26 87.63 0)
 			(effects
 				(font
@@ -3221,74 +2800,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 107.95 40.64 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "589e88ab-78fa-4c1f-adb8-a236bd049d85")
-		(property "Reference" "R7"
-			(at 107.95 34.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 107.95 36.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 107.95 42.418 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 107.95 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 107.95 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "75b1bf58-b557-40cb-bf4f-8ae9bd449b61")
-		)
-		(pin "2"
-			(uuid "bb9e2072-c519-4b6e-b8a2-e3d06e5504b4")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 115.57 44.45 90)
 		(unit 1)
@@ -3316,7 +2827,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 115.57 44.45 0)
 			(effects
 				(font
@@ -3386,7 +2897,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 128.27 44.45 0)
 			(effects
 				(font
@@ -3456,7 +2967,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 128.27 90.17 0)
 			(effects
 				(font
@@ -3493,74 +3004,6 @@
 			(project "TinyWatch"
 				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
 					(reference "D14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 154.94 83.82 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7f255554-b9c3-4712-8e75-9c86cc961b97")
-		(property "Reference" "R13"
-			(at 154.94 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 154.94 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 154.94 85.598 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 154.94 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2411220a-a69f-4d7d-904e-ecee269de86d")
-		)
-		(pin "2"
-			(uuid "0b4fe06e-901d-4c50-8abb-4c6b1f5cc1b3")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -3660,7 +3103,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 115.57 109.22 0)
 			(effects
 				(font
@@ -3730,7 +3173,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 162.56 44.45 0)
 			(effects
 				(font
@@ -3773,74 +3216,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 107.95 66.04 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8d1dc238-eec7-4678-a357-eeda379a5714")
-		(property "Reference" "R8"
-			(at 107.95 59.69 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 107.95 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 107.95 67.818 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 107.95 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 107.95 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fad040cf-37e4-4621-955b-5ae586a29d7d")
-		)
-		(pin "2"
-			(uuid "a330f4b4-aabb-4725-a4c9-bc4af36fe2a7")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 62.23 69.85 90)
 		(unit 1)
@@ -3868,7 +3243,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 62.23 69.85 0)
 			(effects
 				(font
@@ -3911,142 +3286,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 107.95 105.41 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a21be35-ae3c-4e71-8a57-cfda3108f201")
-		(property "Reference" "R10"
-			(at 107.95 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 107.95 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 107.95 107.188 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 107.95 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 107.95 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7b0f87ac-4f3f-4e2b-b69a-5a8da0191302")
-		)
-		(pin "2"
-			(uuid "f0024f34-e725-44bd-8739-95b84df02c7b")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 107.95 86.36 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a2cee300-c2ca-40c4-9313-11fe1e18e488")
-		(property "Reference" "R9"
-			(at 107.95 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 107.95 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 107.95 88.138 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 107.95 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 107.95 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f6fce256-7a7f-4519-90f8-54627e0659ef")
-		)
-		(pin "2"
-			(uuid "90f1dcbe-c247-48bd-a115-e0adc9578eee")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 74.93 109.22 90)
 		(unit 1)
@@ -4074,7 +3313,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 74.93 109.22 0)
 			(effects
 				(font
@@ -4144,7 +3383,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 74.93 90.17 0)
 			(effects
 				(font
@@ -4187,106 +3426,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NPN")
-		(at 80.01 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab3ce695-5705-4119-b1e7-cbd9354242be")
-		(property "Reference" "Q1"
-			(at 85.09 156.2099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NPN"
-			(at 85.09 158.7499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 143.51 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-			(at 143.51 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
-			(at 80.01 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 80.01 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "GUMMELPOON"
-			(at 80.01 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 80.01 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "14934786-c253-4d72-b0fa-bebfa07e37b4")
-		)
-		(pin "1"
-			(uuid "2b1d80d6-2acf-4d63-977b-a28bf3cfcbd4")
-		)
-		(pin "2"
-			(uuid "835dcc6c-ac72-4d25-9cf7-80b677408462")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 74.93 69.85 90)
 		(unit 1)
@@ -4314,7 +3453,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 74.93 69.85 0)
 			(effects
 				(font
@@ -4384,7 +3523,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -4427,6 +3566,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:MMBT5551L")
+		(at 80.01 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7f9ed21-83f6-488b-aa8c-a2081e18c672")
+		(property "Reference" "Q1"
+			(at 85.09 156.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT5551L"
+			(at 85.09 158.7499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 85.09 159.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF"
+			(at 80.01 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.6A Ic, 160V Vce, NPN Transistor, SOT-23"
+			(at 80.01 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "30d47554-a548-4e2d-87e1-0c688858ce63")
+		)
+		(pin "1"
+			(uuid "001552e2-44b9-4b23-adea-d386ce0968a8")
+		)
+		(pin "3"
+			(uuid "dcf63bfb-14fe-47c1-bd7e-96e7265b4862")
+		)
+		(instances
+			(project "TinyWatch"
+				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 162.56 66.04 90)
 		(unit 1)
@@ -4454,7 +3669,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 162.56 66.04 0)
 			(effects
 				(font
@@ -4524,7 +3739,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 162.56 109.22 0)
 			(effects
 				(font
@@ -4568,31 +3783,34 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 154.94 105.41 90)
+		(at 82.55 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "caabca88-9a5a-45c3-a5e2-f59b595e6b23")
-		(property "Reference" "R14"
-			(at 154.94 99.568 90)
+		(fields_autoplaced yes)
+		(uuid "c3e02769-b2bf-4c0d-82d7-e86303938436")
+		(property "Reference" "R2"
+			(at 85.09 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "50"
-			(at 154.94 101.6 90)
+			(at 85.09 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 154.94 107.188 90)
+			(at 80.772 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4601,7 +3819,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 154.94 105.41 0)
+			(at 82.55 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4610,7 +3828,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 154.94 105.41 0)
+			(at 82.55 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4619,15 +3837,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "df1d46d7-63f9-4be6-b134-a26cfe1f9fb0")
+			(uuid "f2ab1703-8c49-4eea-9df0-6aa03089cb60")
 		)
 		(pin "2"
-			(uuid "d01f13c7-ce8c-41a1-9c68-7e0f6e64dec3")
+			(uuid "a56e67bb-9194-4916-b3ea-5c425c6cd66a")
 		)
 		(instances
 			(project "TinyWatch"
 				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R14")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -4661,7 +3879,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 162.56 87.63 0)
 			(effects
 				(font
@@ -4731,7 +3949,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 74.93 44.45 0)
 			(effects
 				(font
@@ -4801,7 +4019,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 175.26 66.04 0)
 			(effects
 				(font
@@ -4838,174 +4056,6 @@
 			(project "TinyWatch"
 				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
 					(reference "D22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NPN")
-		(at 52.07 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e3dfe39d-3f38-4d14-8dbf-f102194b79c1")
-		(property "Reference" "Q2"
-			(at 57.15 156.2099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NPN"
-			(at 57.15 158.7499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 115.57 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-			(at 115.57 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
-			(at 52.07 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 52.07 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "GUMMELPOON"
-			(at 52.07 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 52.07 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "3529502a-0ee1-445d-8f26-ab65af5f3bbd")
-		)
-		(pin "1"
-			(uuid "68c22e57-cf02-4b50-bd60-69e75a6840bb")
-		)
-		(pin "2"
-			(uuid "ae5f6482-1522-4410-9fd9-29d31a9d38f5")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 54.61 86.36 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f1e078c6-97ba-4231-a8e3-0d45f33a5a04")
-		(property "Reference" "R5"
-			(at 54.61 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "50"
-			(at 54.61 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 54.61 88.138 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.61 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 54.61 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "86e40a05-a428-4ae2-b640-0ac0e1b9433e")
-		)
-		(pin "2"
-			(uuid "7c8fa523-43b4-4513-a55a-84410ea1fe54")
-		)
-		(instances
-			(project "TinyWatch"
-				(path "/f2375381-4f0e-401f-96ec-1e4b55d9522c/64471aae-e137-4557-b4e1-04e26fdeb98c"
-					(reference "R5")
 					(unit 1)
 				)
 			)

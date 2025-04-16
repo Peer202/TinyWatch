@@ -2388,6 +2388,16 @@
 		)
 		(uuid "8f907230-9d8a-4e03-a198-38125ca2d427")
 	)
+	(text "TP4056"
+		(exclude_from_sim no)
+		(at 77.47 27.178 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "dbfef359-e143-49a9-9a00-f6fb30948946")
+	)
 	(global_label "UPDI"
 		(shape input)
 		(at 257.81 41.91 0)
